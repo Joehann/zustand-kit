@@ -12,7 +12,8 @@ export namespace ZustandKit {
   ) => void
 
   export type ActionAndStoreWithResHandling = (
-    mutator: Parameters<SetStore>[0]
+    mutator: Parameters<SetStore>[0],
+    subpath?: string
   ) => (path: string, fetchFunction: () => Promise<unknown>) => Promise<void>
 
   export type HttpResponse = {
