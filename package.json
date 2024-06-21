@@ -1,0 +1,31 @@
+{
+  "name": "zustand-kit",
+  "version": "1.0.0",
+  "description": "Tool kit for zustand",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "scripts": {
+    "build": "tsc"
+  },
+  "keywords": [
+    "zustand",
+    "kit",
+    "clean",
+    "architecture",
+    "typescript"
+  ],
+  "author": "Johann Pouponnot",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/lodash": "^4.17.5",
+    "@types/node": "^20.14.7",
+    "typescript": "^5.5.2"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
+}
