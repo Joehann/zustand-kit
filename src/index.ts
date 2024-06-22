@@ -1,4 +1,3 @@
-import type { ZustandKit } from './types'
 import setStore from './lib/setStore'
 import setApiResponse from './lib/setApiResponse'
 import processAsyncRequest from './lib/processAsyncRequest'
