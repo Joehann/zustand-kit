@@ -11,7 +11,7 @@ export namespace ZustandKit {
     message?: HttpResponse['message']
   ) => void
 
-  export type ActionAndStoreWithResHandling = (
+  export type ProcessAsyncRequest = (
     mutator: Parameters<SetStore>[0],
     subpath?: string
   ) => (path: string, fetchFunction: () => Promise<unknown>) => Promise<void>

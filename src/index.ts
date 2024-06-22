@@ -14,7 +14,7 @@ const setApiResponse: ZustandKit.SetApiResponse =
     })
   }
 
-const actionAndStoreWithResHandling: ZustandKit.ActionAndStoreWithResHandling =
+const processAsyncRequest: ZustandKit.ProcessAsyncRequest =
   (mutator, subpath = 'httpResponse') =>
   async (path, fetchFunction) => {
     const handleSetStore = setStore(mutator)
@@ -46,7 +46,7 @@ const httpResponse: ZustandKit.HttpResponse = {
 const _zk = {
   setStore,
   setApiResponse,
-  actionAndStoreWithResHandling,
+  processAsyncRequest,
   httpResponse,
 }
 

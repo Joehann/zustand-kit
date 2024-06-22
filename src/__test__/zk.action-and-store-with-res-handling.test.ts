@@ -5,7 +5,7 @@ describe('actionAndStoreWithResHandling', () => {
     const mutator = jest.fn((callback) => callback({}))
     const fetchFunction = jest.fn().mockResolvedValue('data received')
 
-    await _zk.actionAndStoreWithResHandling(mutator, 'httpResponse')(
+    await _zk.processAsyncRequest(mutator, 'httpResponse')(
       'path',
       fetchFunction
     )
@@ -20,7 +20,7 @@ describe('actionAndStoreWithResHandling', () => {
       .fn()
       .mockRejectedValue(new Error('Failed to fetch'))
 
-    await _zk.actionAndStoreWithResHandling(mutator, 'httpResponse')(
+    await _zk.processAsyncRequest(mutator, 'httpResponse')(
       'path',
       fetchFunction
     )
